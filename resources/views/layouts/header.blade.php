@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    @stack('title')
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="{{asset('assets/CSS/style.css')}}"rel="stylesheet" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,8 @@
     
     <nav class="navbar navbar-expand-lg theme-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand href='#"><img src="{{asset('assets/images/logo/mehedi.png')}}" class="card-img-top" style="width: 70px;"></a>
+
+    <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('assets/images/logo/mehedi.png')}}" class="card-img-top" style="width: 70px;"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
