@@ -8,3 +8,7 @@
 .theme-navbar-light{
     background-color: rgb(11, 225, 153);
 }
+.theme-product img:hover{
+    transform: scaleX(-1);
+
+}
