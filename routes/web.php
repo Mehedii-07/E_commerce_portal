@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use Pest\Support\View;
+use App\Http\Controllers\CategoryController;
 
 
 Route::get('/', function () {
@@ -12,3 +13,5 @@ Route::get('/', function () {
 
 
 Route::get('/', [HomeController::class,'index']);
+
+Route::get('/category/{slug}/{id}', [CategoryController::class,'detail']);
