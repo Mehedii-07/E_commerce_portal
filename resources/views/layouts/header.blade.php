@@ -52,7 +52,7 @@
           <a class="nav-link active text-dark"  href="#">Classic fashion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active text-dark"  href="{{url('category/electronics/tv')}}">Western fashion</a>
+          <a class="nav-link active text-dark"  href="{{url('category/electronics/tv')}}">Applience</a>
         </li>
         
       </ul>

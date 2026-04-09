@@ -36,7 +36,7 @@
         
         <div class="d-flex">
             <div class="p-2 flex-grow-1"><h2 class="mb-3">Top Deals</h2></div>
-            <div class="p-2 "><a href="#" class="btn theme-green-btn text-light">View All</a></div>
+            
             <div><a href="{{url('category/electronics')}}" class="btn btn-sm theme-green-btn text-light rounded-pill px-3 py-2">View All</a></div>
             
             </div>

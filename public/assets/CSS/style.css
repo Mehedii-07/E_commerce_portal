@@ -1,14 +1,40 @@
 .theme-navbar{
-    background-color: rgb(235, 136, 7);
+    background-color: #a700cc;
 }
-.theme-footer{
-     background-color: rgb(235, 136, 7);
 
-}
 .theme-navbar-light{
-    background-color: rgb(11, 225, 153);
+    background-color: #9baab9;
 }
+
+.theme-orange-btn{
+    background-color: #FF6600;
+}
+
+.theme-orange-btn:hover{
+    background-color: #FF6600;
+    opacity: 0.9;
+}
+
+.theme-green-btn{
+    background-color: #28A745;
+}
+
+.theme-green-btn:hover{
+    background-color: #28A745;
+    opacity: 0.9;
+}
+
+.theme-footer{
+    background-color: #0066CC;
+}
+
 .theme-product img:hover{
     transform: scaleX(-1);
+}
 
+body {
+    font-family: 'Lato', sans-serif;
+  }
+.checked{
+    color: #FF6600;
 }
