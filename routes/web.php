@@ -17,4 +17,4 @@ Route::get('/', [HomeController::class,'index']);
 
 Route::get('/category/{slug}', [CategoryController::class,'detail']);
 Route::get('/category/electronics/{slug}', [SubcategoryController::class,'detail']);
-Route::get('/category/electronics/tv{slug}', [ProductdetailController::class,'detail']);
+Route::get('/category/electronics/tv/{slug}', [ProductdetailController::class,'detail']);
