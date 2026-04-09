@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class ProductdetailController extends Controller
 {
     public function detail($slug){
-        return View('category');
+        return View('subcategory');
     }
     
 }

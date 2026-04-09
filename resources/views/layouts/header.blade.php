@@ -38,7 +38,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="nav text-dark">
         <li class="nav-item">
-          <a class="nav-link active text-dark"  href="{{url('category/category1/1')}}">T-shirt</a>
+          <a class="nav-link active text-dark"  href="{{url('category/electronics')}}">T-shirt</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active text-dark"  href="#">Panjabi</a>
@@ -52,7 +52,7 @@
           <a class="nav-link active text-dark"  href="#">Classic fashion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active text-dark"  href="#">Western fashion</a>
+          <a class="nav-link active text-dark"  href="{{url('category/electronics/tv')}}">Western fashion</a>
         </li>
         
       </ul>
