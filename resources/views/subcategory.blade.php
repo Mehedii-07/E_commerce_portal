@@ -17,48 +17,92 @@
         <div class="row theme-product">
             <div class="col-lg-3">
                 <div class="card " >
-                <a  href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
-                <div class="card-body">
-                    <h6 class="card-title text-center "><a href="{{url('category/electronics/tv/detail')}}" class="text-dark text-decoration-none"> Tote Bag</a></h6>
-                    <h5 class="card-title text-center">₹ 499.00</h5>                   
-                </div>  
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card " >
-                
-                <a href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
-                <div class="card-body">
-                    <h6 class="card-title text-center "><a href="#" class="text-dark text-decoration-none">Shoulder Bag</a></h6>
-                    <h5 class="card-title text-center">₹ 499.00</h5>
-                    
-                </div>  
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card " >
-                
-                <a href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
-                <div class="card-body">
-                    <h6 class="card-title text-center "><a href="#" class="text-dark text-decoration-none">Hobo Bag</a></h6>
-                    <h5 class="card-title text-center">₹ 499.00</h5>
-                    
-                </div>  
-                </div>
-            </div>
 
-            <div class="col-lg-3">
-                <div class="card " >
                 
-                <a href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
-                <div class="card-body">
-                    <h6 class="card-title text-center "><a href="#" class="text-dark text-decoration-none">Backpack</a></h6>
-                    <h5 class="card-title text-center">₹ 499.00</h5>
-                    
-                </div>  
+                    <a  href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h6 class="card-title text-center "><a href="{{url('category/electronics/tv/detail')}}" class="text-dark text-decoration-none"> Bag</a></h6>
+                        <h5 class="card-title text-center">৳ 499.00</h5>                   
+                    </div>  
                 </div>
             </div>
+            <div class="col-lg-3">
+                <div class="card " >
 
+                
+                    <a  href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h6 class="card-title text-center "><a href="{{url('category/electronics/tv/detail')}}" class="text-dark text-decoration-none"> Bag</a></h6>
+                        <h5 class="card-title text-center">৳ 499.00</h5>                   
+                    </div>  
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card " >
+
+                
+                    <a  href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h6 class="card-title text-center "><a href="{{url('category/electronics/tv/detail')}}" class="text-dark text-decoration-none"> Bag</a></h6>
+                        <h5 class="card-title text-center">৳ 499.00</h5>                   
+                    </div>  
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card " >
+
+                
+                    <a  href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h6 class="card-title text-center "><a href="{{url('category/electronics/tv/detail')}}" class="text-dark text-decoration-none"> Bag</a></h6>
+                        <h5 class="card-title text-center">৳ 499.00</h5>                   
+                    </div>  
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card " >
+
+                
+                    <a  href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h6 class="card-title text-center "><a href="{{url('category/electronics/tv/detail')}}" class="text-dark text-decoration-none"> Bag</a></h6>
+                        <h5 class="card-title text-center">৳ 499.00</h5>                   
+                    </div>  
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card " >
+
+                
+                    <a  href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h6 class="card-title text-center "><a href="{{url('category/electronics/tv/detail')}}" class="text-dark text-decoration-none"> Bag</a></h6>
+                        <h5 class="card-title text-center">৳ 499.00</h5>                   
+                    </div>  
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card " >
+
+                
+                    <a  href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h6 class="card-title text-center "><a href="{{url('category/electronics/tv/detail')}}" class="text-dark text-decoration-none"> Bag</a></h6>
+                        <h5 class="card-title text-center">৳ 499.00</h5>                   
+                    </div>  
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card " >
+
+                
+                    <a  href="{{url('category/electronics/tv/detail')}}"><img src="{{asset('assets/images/products/p1.jfif')}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h6 class="card-title text-center "><a href="{{url('category/electronics/tv/detail')}}" class="text-dark text-decoration-none"> Bag</a></h6>
+                        <h5 class="card-title text-center">৳ 499.00</h5>                   
+                    </div>  
+                </div>
+            </div>
 
 
             
