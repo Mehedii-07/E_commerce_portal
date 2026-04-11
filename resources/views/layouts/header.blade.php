@@ -28,8 +28,8 @@
   <div>
     
     <a href=""class="text-decoration-none Text-light">Become a seller</a>
-      <a href=""class="btn btn-success btn_sm">Cart</a>
-      <a href=""class="btn btn-light">Login</a></div>
+      <a href="{{url('cart-list/product')}}"class="btn btn-success btn_sm">Cart</a>
+      <a href="{{url('login')}}"class="btn btn-light">Login</a></div>
 </nav>
 
 
