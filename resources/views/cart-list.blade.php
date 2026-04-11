@@ -74,7 +74,7 @@
                     <th>
                         <div class="d-flex">
                             <div>
-                                <img src="{{asset('assets/images/products/2.jpg')}}" style="width:70px;" class="rounded-3">
+                                <img src="{{asset('assets/images/products/p2.jfif')}}" style="width:70px;" class="rounded-3">
                             </div>
                             <div class="p-3"><h5>Watch</h5></div>
                         </div>
