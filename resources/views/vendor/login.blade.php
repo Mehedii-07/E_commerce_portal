@@ -23,7 +23,7 @@
 
                                     <div class="col-lg-12 mb-3">
                                     <label  class="form-label">Phone Number</label>
-                                        <input type="tel" class="form-control" placeholder="+91 ">
+                                        <input type="tel" class="form-control" placeholder="+880 ">
                                     </div>
 
                                    
