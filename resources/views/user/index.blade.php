@@ -14,7 +14,7 @@
                             <div class="col-xl-6 col-md-6">
                                 <div class="card bg-info text-white mb-4">
                                     <div class="card-body mx-auto">
-                                        <img src="{{asset('dashboard/assets/img/user.png')}}" style="width:155px;">
+                                        <img src="{{asset('dashboard/assets/img/Character1.png')}}" style="width:155px;">
                                     </div>
                                     <div class="my-3">
                                         <h5 class="text-center text-dark">John Doe</h5>

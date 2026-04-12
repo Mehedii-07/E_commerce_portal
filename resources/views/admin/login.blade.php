@@ -9,9 +9,9 @@
         <div class="row">
             <div class="col-lg-10">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 ">
                         <div>
-                        <img src="{{asset('dashboard/assets/img/admin.jpg')}}" class="rounded-3 img-fluid">
+                        <img src="{{asset('dashboard/assets/img/Character111.png')}}" class="rounded-3 img-fluid width :30px">
                         </div>
                     </div>
 
