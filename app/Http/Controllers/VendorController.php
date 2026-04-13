@@ -2,12 +2,33 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Vendor;
 use Illuminate\Http\Request;
 
 class VendorController extends Controller
 {
     public function signup(){
         return view('vendor/signup');
+    }
+    public function register(Request $request){
+        $request->validate([
+
+            "full_name" => "required",
+            "phone"     => ["required", "regex:/^[0-9]{11}$/", "unique:vendors,phone"],
+            "email"     => "required|email|unique:vendors,email",
+            "password"  => "required",
+            "address"   => "required",
+        ]); 
+        Vendor::create([
+            "full_name"=>$request -> full_name,
+            "phone"=>$request -> phone,
+            "email"=>$request -> email,
+            "password"=>$request -> password,
+            "address"=>$request -> address,
+
+
+        ]);
+        return redirect('vendor/signup')->with('msg','registration_successfully');
     }
 
 
