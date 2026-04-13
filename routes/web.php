@@ -49,6 +49,7 @@ Route::get('user/settings/',[UserController::class,'settings']);
 // Vendor Dashboard Route Srart Here:
 
 Route::get('vendor/signup',[VendorController::class,'signup']);
+Route::post('vendor/signup',[VendorController::class,'register']);
 
 Route::get('vendor/login',[VendorController::class,'login']);
 
