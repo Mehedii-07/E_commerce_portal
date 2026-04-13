@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('bank_account_no');
             $table->string('payment_method');
             $table->string('image');
-            $table->string('status');
+            $table->string('status')->default("unverified");
             
             $table->timestamps();
         });

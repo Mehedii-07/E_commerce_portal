@@ -17,35 +17,55 @@
 
                     <div class="col-lg-6">
                         <div>
-                            <form>
+                            <form method="POST" action="{{url('vendor/signup')}}">
+                                @csrf
                                 <div class="row">
                                     <div class="col-lg-12 mb-3">
                                     <label  class="form-label">Full Name</label>
-                                        <input type="text" class="form-control" placeholder="John Doe">
+                                        <input type="text" class="form-control" name="full_name"
+                                        placeholder="John Doe">
+                                        @error("full_name")
+                                            <div class="text_denger">{{$message}}</div>
+                                        @enderror
                                     </div>
 
                                     <div class="col-lg-6 mb-3">
                                     <label  class="form-label">Phone Number</label>
-                                        <input type="tel" class="form-control" placeholder="+91 ">
+                                        <input type="tel" class="form-control" name="phone"
+                                         placeholder="+91 ">
+                                         @error("phone")
+                                            <div class="text_denger">{{$message}}</div>
+                                         @enderror
                                     </div>
 
                                     <div class="col-lg-6 mb-3">
                                     <label  class="form-label">Email</label>
-                                        <input type="email" class="form-control" placeholder="john@gmail.com">
+                                        <input type="email" class="form-control" name="email"
+                                        placeholder="john@gmail.com">
+                                        @error("email")
+                                            <div class="text_denger">{{$message}}</div>
+                                        @enderror
                                     </div>
 
                                     <div class="col-lg-12 mb-3">
                                     <label  class="form-label">Password</label>
-                                        <input type="password" class="form-control" placeholder="******">
+                                        <input type="password" name="password" class="form-control" placeholder="******">
+                                        @error("password")
+                                            <div class="text_denger">{{$message}}</div>
+                                        @enderror
                                     </div>
 
                                     <div class="col-lg-12 mb-3">
                                     <label  class="form-label">Address</label>
-                                        <textarea class="form-control" placeholder="Enter your address" id="floatingTextarea2" style="height: 100px"></textarea>
+                                        <textarea class="form-control" name="address"
+                                         placeholder="Enter your address" id="floatingTextarea2" style="height: 100px"></textarea>
+                                         @error("address")
+                                            <div class="text_denger">{{$message}}</div>
+                                         @enderror
                                     </div>
                                 </div>
                                
-                                <a href="#" type="btn" class="btn btn-primary text-light form-control form-control-lg">Signup</a>
+                                <button type="submit" type="btn" class="btn btn-primary text-light form-control form-control-lg">Signup</button>
                                 <div class="text-center p-2">Have an account? <a href="{{url('vendor/login')}}" class="text-decoration-none">Login</a></div>
                             </form>
                         </div>
