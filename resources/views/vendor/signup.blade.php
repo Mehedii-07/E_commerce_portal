@@ -16,6 +16,9 @@
                     </div>
 
                     <div class="col-lg-6">
+                        @session('msg')
+                            <div class="alert alert-success">{{session('msg')}}</div>
+                        @endsession
                         <div>
                             <form method="POST" action="{{url('vendor/signup')}}">
                                 @csrf
@@ -25,7 +28,7 @@
                                         <input type="text" class="form-control" name="full_name"
                                         placeholder="John Doe">
                                         @error("full_name")
-                                            <div class="text_denger">{{$message}}</div>
+                                            <div class="text-denger">{{$message}}</div>
                                         @enderror
                                     </div>
 
@@ -34,7 +37,7 @@
                                         <input type="tel" class="form-control" name="phone"
                                          placeholder="+91 ">
                                          @error("phone")
-                                            <div class="text_denger">{{$message}}</div>
+                                            <div class="text-denger">{{$message}}</div>
                                          @enderror
                                     </div>
 
@@ -43,7 +46,7 @@
                                         <input type="email" class="form-control" name="email"
                                         placeholder="john@gmail.com">
                                         @error("email")
-                                            <div class="text_denger">{{$message}}</div>
+                                            <div class="text-denger">{{$message}}</div>
                                         @enderror
                                     </div>
 
@@ -51,7 +54,7 @@
                                     <label  class="form-label">Password</label>
                                         <input type="password" name="password" class="form-control" placeholder="******">
                                         @error("password")
-                                            <div class="text_denger">{{$message}}</div>
+                                            <div class="text-denger">{{$message}}</div>
                                         @enderror
                                     </div>
 
@@ -60,7 +63,7 @@
                                         <textarea class="form-control" name="address"
                                          placeholder="Enter your address" id="floatingTextarea2" style="height: 100px"></textarea>
                                          @error("address")
-                                            <div class="text_denger">{{$message}}</div>
+                                            <div class="text-denger">{{$message}}</div>
                                          @enderror
                                     </div>
                                 </div>

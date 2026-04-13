@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('full_name');
             $table->string('phone');
             $table->string('email');
+            $table->string('password');
             $table->text('address');
             $table->string('id_number');
             $table->string('business_name');
