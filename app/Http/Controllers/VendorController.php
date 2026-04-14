@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Vendor;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash; 
 class VendorController extends Controller
 {
     public function signup(){
@@ -33,8 +33,23 @@ class VendorController extends Controller
     }
 
 
-    public function login(){
-        return view('vendor/login');
+    public function login() {
+        return view('vendor.login');
+    }
+
+    public function login_create(Request $request) {
+        $request->validate([
+            "phone"    => "required",
+            "password" => "required",
+        ]);
+
+        $vendor = Vendor::where('phone', $request->phone)->first();
+
+        if ($vendor && Hash::check($request->password, $vendor->password)) {
+            return redirect('vendor/');
+        } else {
+            return redirect()->back()->with('error', 'Invalid phone or password');
+        }
     }
 
     public function forget(){

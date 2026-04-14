@@ -51,7 +51,8 @@ Route::get('user/settings/',[UserController::class,'settings']);
 Route::get('vendor/signup',[VendorController::class,'signup']);
 Route::post('vendor/signup',[VendorController::class,'register']);
 
-Route::get('vendor/login',[VendorController::class,'login']);
+Route::get('vendor/login', [VendorController::class, 'login']);
+Route::post('vendor/login', [VendorController::class, 'login_create']);
 
 Route::get('vendor/forget',[VendorController::class,'forget']);
 
