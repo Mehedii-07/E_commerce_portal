@@ -53,6 +53,7 @@ Route::post('vendor/signup',[VendorController::class,'register']);
 
 Route::get('vendor/login', [VendorController::class, 'login']);
 Route::post('vendor/login', [VendorController::class, 'login_create']);
+Route::get('vendor/logout', [VendorController::class, 'logout']);
 
 Route::get('vendor/forget',[VendorController::class,'forget']);
 
