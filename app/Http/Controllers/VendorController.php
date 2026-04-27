@@ -52,10 +52,14 @@ class VendorController extends Controller
                     ->first();
 
     if ($checkvendor ) {
+
+    if($checkvendor->status=="verified"){
+        
+    }
        
         return redirect('vendor/');
     } else {
-        return redirect()->back()->with('error', 'Invalid phone or password');
+    return redirect('vendor/login')->with('msg','you are not verified');
     }
     }
     public function logout(){
