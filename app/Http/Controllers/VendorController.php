@@ -5,7 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Vendor;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash; 
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+
+use function Pest\Laravel\session;
+
 class VendorController extends Controller
 {
     public function signup(){
@@ -38,20 +42,30 @@ class VendorController extends Controller
     }
 
     public function login_create(Request $request) {
-        $request->validate([
-            "phone"    => "required",
-            "password" => "required",
-        ]);
+    $request->validate([
+        "phone"    => "required",
+        "password" => "required",
+    ]);
 
-        $vendor = Vendor::where('phone', $request->phone)->first();
+    $checkvendor = Vendor::where('phone', $request->phone)
+                    ->where('password', $request->password)
+                    ->first();
 
-        if ($vendor && Hash::check($request->password, $vendor->password)) {
-            return redirect('vendor/');
-        } else {
-            return redirect()->back()->with('error', 'Invalid phone or password');
-        }
+    if ($checkvendor ) {
+
+    if($checkvendor->status=="verified"){
+        
     }
-
+       
+        return redirect('vendor/');
+    } else {
+    return redirect('vendor/login')->with('msg','you are not verified');
+    }
+    }
+    public function logout(){
+    request()->session()->flush();
+    return redirect('vendor/login');
+    }
     public function forget(){
         return view('vendor/forget');
     }
