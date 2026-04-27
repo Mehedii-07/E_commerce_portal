@@ -41,27 +41,45 @@ class VendorController extends Controller
         return view('vendor.login');
     }
 
-    public function login_create(Request $request) {
+    public function register(Request $request){
+    $request->validate([
+        "full_name" => "required",
+        "phone"     => ["required", "regex:/^[0-9]{11}$/", "unique:vendors,phone"],
+        "email"     => "required|email|unique:vendors,email",
+        "password"  => "required",
+        "address"   => "required",
+    ]); 
+
+    Vendor::create([
+        "full_name" => $request->full_name,
+        "phone"     => $request->phone,
+        "email"     => $request->email,
+        "password"  => Hash::make($request->password), // ✅ hash the password
+        "address"   => $request->address,
+    ]);
+
+    return redirect('vendor/signup')->with('msg', 'Registration successful!');
+}
+
+public function login_create(Request $request){
     $request->validate([
         "phone"    => "required",
         "password" => "required",
     ]);
 
-    $checkvendor = Vendor::where('phone', $request->phone)
-                    ->where('password', $request->password)
-                    ->first();
+    $checkVendor = Vendor::where('phone', $request->phone)->first();
 
-    if ($checkvendor ) {
-
-    if($checkvendor->status=="verified"){
-        
-    }
-       
-        return redirect('vendor/');
+    if($checkVendor && Hash::check($request->password, $checkVendor->password)){ // ✅ proper check
+        if($checkVendor->status == "verified"){
+            session(['vendorLogin' => true]);
+            return redirect('vendor/');
+        } else {
+            return redirect('vendor/login')->with('msg', 'You are not verified');
+        }
     } else {
-    return redirect('vendor/login')->with('msg','you are not verified');
+        return redirect('vendor/login')->with('msg', 'Invalid Phone/Password');
     }
-    }
+}
     public function logout(){
     request()->session()->flush();
     return redirect('vendor/login');
