@@ -3,42 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vendor;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Session;
-
-use function Pest\Laravel\session;
 
 class VendorController extends Controller
 {
     public function signup(){
-        return view('vendor/signup');
-    }
-    public function register(Request $request){
-        $request->validate([
-
-            "full_name" => "required",
-            "phone"     => ["required", "regex:/^[0-9]{11}$/", "unique:vendors,phone"],
-            "email"     => "required|email|unique:vendors,email",
-            "password"  => "required",
-            "address"   => "required",
-        ]); 
-        Vendor::create([
-            "full_name"=>$request -> full_name,
-            "phone"=>$request -> phone,
-            "email"=>$request -> email,
-            "password"=>$request -> password,
-            "address"=>$request -> address,
-
-
-        ]);
-        return redirect('vendor/signup')->with('msg','registration_successfully');
-    }
-
-
-    public function login() {
-        return view('vendor.login');
+        return view('vendor.signup');
     }
 
     public function register(Request $request){
@@ -54,69 +25,75 @@ class VendorController extends Controller
         "full_name" => $request->full_name,
         "phone"     => $request->phone,
         "email"     => $request->email,
-        "password"  => Hash::make($request->password), // ✅ hash the password
+        "password"  => Hash::make($request->password),
         "address"   => $request->address,
     ]);
 
     return redirect('vendor/signup')->with('msg', 'Registration successful!');
 }
 
-public function login_create(Request $request){
-    $request->validate([
-        "phone"    => "required",
-        "password" => "required",
-    ]);
+    public function login(){
+        return view('vendor.login');
+    }
 
-    $checkVendor = Vendor::where('phone', $request->phone)->first();
+    public function login_create(Request $request){
+        $request->validate([
+            "phone"    => "required",
+            "password" => "required",
+        ]);
 
-    if($checkVendor && Hash::check($request->password, $checkVendor->password)){ // ✅ proper check
-        if($checkVendor->status == "verified"){
-            session(['vendorLogin' => true]);
-            return redirect('vendor/');
+        $checkVendor = Vendor::where('phone', $request->phone)->first();
+
+        if($checkVendor && Hash::check($request->password, $checkVendor->password)){
+            if($checkVendor->status == "verified"){
+                session(['vendorLogin' => true]);
+                return redirect('vendor/');
+            } else {
+                return redirect('vendor/login')->with('msg', 'You are not verified');
+            }
         } else {
-            return redirect('vendor/login')->with('msg', 'You are not verified');
+            return redirect('vendor/login')->with('msg', 'Invalid Phone/Password');
         }
-    } else {
-        return redirect('vendor/login')->with('msg', 'Invalid Phone/Password');
     }
-}
+
     public function logout(){
-    request()->session()->flush();
-    return redirect('vendor/login');
+        request()->session()->flush();
+        return redirect('vendor/login');
     }
+
     public function forget(){
-        return view('vendor/forget');
+        return view('vendor.forget');
     }
 
     public function index(){
-        return view('vendor/index');
+        return view('vendor.index');
     }
 
     public function addproduct(){
-        return view('vendor/add-product');
+        return view('vendor.add-product');
     }
 
     public function viewproduct(){
-        return view('vendor/view-product');
+        return view('vendor.view-product');
     }
 
     public function editproduct(){
-        return view('vendor/edit-product');
+        return view('vendor.edit-product');
     }
 
     public function orders(){
-        return view('vendor/orders');
+        return view('vendor.orders');
     }
 
     public function orderdetail(){
-        return view('vendor/order-detail');
+        return view('vendor.order-detail');
     }
 
     public function users(){
-        return view('vendor/users');
+        return view('vendor.users');
     }
 
     public function profile(){
-        return view('vendor/profile');
+        return view('vendor.profile');
     }
 }
